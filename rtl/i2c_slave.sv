@@ -53,11 +53,6 @@ module i2c_slave #(parameter ADDR=7'h42)(
         if(state == READ_ACK && master_ack == 1'b0)
             slav_reg <= slav_reg + 1;
         case(state)
-            IDLE            :   begin
-                                    rx_count <= 0;
-                                    tx_count <= 0;
-                                    reg_shift <= 0;
-                                end
             ADDR_SHIFT      :   begin
                                     reg_shift <= {reg_shift[6:0], SDA_in};
                                     rx_count++;
