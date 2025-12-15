@@ -153,3 +153,4 @@ module i2c_slave #(parameter ADDR=7'h42)(
                                 end
         endcase
     end
+endmodule
