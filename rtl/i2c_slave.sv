@@ -152,5 +152,4 @@ module i2c_slave #(parameter ADDR=7'h42)(
                                     if(stop_cond) next_state = IDLE;
                                 end
         endcase
-        end
     end
